@@ -18,12 +18,27 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSMotionUsageDescription": "This app uses the accelerometer to track your steps.",
+        "NSHealthUpdateUsageDescription": "This app uses HealthKit to track your steps.",
+        "UIBackgroundModes": [
+          "location",
+          "fetch"
+        ]
+      }
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#FFFFFF"
+        "backgroundColor": "#FFFFFF",
+        "permissions": [
+          "ACCESS_COARSE_LOCATION",
+          "ACCESS_FINE_LOCATION",
+          "FOREGROUND_SERVICE",
+          "ACCESS_BACKGROUND_LOCATION",
+          "com.google.android.gms.permission.ACTIVITY_RECOGNITION"
+        ]
       }
     },
     "web": {
